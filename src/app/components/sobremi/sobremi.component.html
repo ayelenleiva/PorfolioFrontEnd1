@@ -1,0 +1,66 @@
+<section id="sobreMi" class="sobreMi text-white mt-4">  
+  <div class="seccion container-fluid rounded shadow-sm mb-5 bg-body-transparent p-0" [ngClass]="{fondouser : isLogged}">
+    
+    <div class="position">        
+      <a href="#experiencia"><button class="btn btn-dark">Experiencia</button></a>
+      <a href="#educacion"><button class="btn btn-dark">Educacion</button></a>
+      <a href="#habilidades"><button class="btn btn-dark">Habilidades</button></a>
+      <a href="#proyectos"><button class="btn btn-dark">Proyectos</button></a>
+      <a href="#footer"><button class="btn btn-dark">Contacto</button></a>     
+    </div>
+      <!--Carrucel de banner-->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img [src]="persona?.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>¡ Bienvenidos !</h1>
+        <p>“La educación es el arma más poderosa que puedes usar para cambiar el mundo” </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img [src]="persona?.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>¡ Bienvenidos !</h1>
+        <p>"Los sueños sin metas, son sólo sueños; y te llevarán a desilusiones. Las metas, son el camino hacia tus sueños; pero no se pueden lograr sin disciplina y consistencia"</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img [src]="persona?.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>¡ Bienvenidos !</h1>
+        <p> “El verdadero peligro no es que las computadoras comenzaran a pensar como los hombres, sino que los hombres comenzaran a pensar como las computadoras”</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+      <div class="row p-3">
+      <div class="col-3">
+        <img [src]="persona?.img" class="rounded-circle profileImage w-50" alt="profileImage"> 
+       <!-- Button trigger modal -->  
+        <button type="button" *ngIf="isLogged" routerLink="editPerfil/{{persona?.id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>
+        <br>
+        <h4 class="nombrePerfil">{{persona?.nombre}} {{persona?.apellido}}</h4>
+        <h5 class="tituloPerfil">{{persona?.titulo}}</h5>
+      </div>
+      <div class="col-8 text-md-start">
+        <h4 class="sobreMiPerfil">{{persona?.sobreMi}}</h4>
+      </div>
+      <div class="col-1 p-0">        
+      </div>
+    </div>
+  </div>
+  </section>

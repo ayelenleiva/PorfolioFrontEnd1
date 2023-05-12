@@ -1,0 +1,17 @@
+<section id="footer" class="footer">
+    <div class="seccion rounded shadow-sm p-3"  [ngClass]="{fondouser : isLogged}">
+  <div class="row">
+      <div class="col-9 text-white">
+      <h6 >@ Argentina Programa 2023 - {{perso?.nombre}} {{perso?.apellido}} - © Copyright </h6>
+    </div>
+  <div class="col-3 d-flex justify-content-end">
+    
+      <a href="download/../assets/documents/MariaAyelenLeiva-CV.pdf" [download]="perso?.curriculum"><button type="button" class="btn btn-close-white"><i class="fa-solid fa-file-arrow-down"></i></button></a>
+
+      <a href="mailto:{{perso?.email}}?Subject=Consulta%20oportunidad%20laboral%20vía%20Portfolio%20Web"><button type="button" class="btn btn-close-white"><i class="fa-solid fa-envelope"></i></button></a>
+
+      
+    </div>
+  </div>
+</div>
+</section>  

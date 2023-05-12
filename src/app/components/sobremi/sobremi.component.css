@@ -1,0 +1,24 @@
+
+
+/*boton de edición de Banner */
+.btn.btn-close-white.editBanner{
+ position: absolute;
+ margin-left: -3rem;
+}
+/*opacidad de selectores*/
+.position-absolute{
+    opacity: 0.6;
+}
+/*tamaño banner*/
+.banner{
+    width: 100%;
+    min-height: 10em;
+    max-height: 20em;
+}
+/*imagen de perfil */
+.profileImage{
+    box-shadow: 6px 6px 5px 2px rgba(24, 21, 21, 0.945);
+    margin-top: -8em;
+    margin-left: 1em;
+    min-width: 5em;
+}
