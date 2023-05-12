@@ -14,22 +14,12 @@
       },
       {
         "id": 2,
-        "banner": "../assets/img/fondoPaisaje.jpg",
-        "profileImage": "../assets/img/LogoArgPro.jpg",
-        "nombre": "Alicia",
-        "apellido":"Maravillas",
+        "banner": "",
+        "profileImage": "",
+        "nombre": "Alan",
+        "apellido":"Gomes",
         "email": "ejemplo@mail.com",
-        "titulo": "Soñadora en potencia",
-        "sobreMi": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen."
-      },
-      {
-        "id": 3,
-        "banner": "../assets/img/LogoArgPro.jpg",
-        "profileImage": "../assets/img/LogoGinastera.png",
-        "nombre": "Otra Persona Ginastera",
-        "apellido":"Ginastera",
-        "email": "ejemplo@mail.com",
-        "titulo": "Soñadora en potencia",
+        "titulo": "dsdsdsdasd",
         "sobreMi": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen."
       }
     ],
@@ -52,15 +42,6 @@
             "inicio": "15-10-2015",
             "fin": "25-02-2023",
             "descripcion": "Carnaval del Pais de Gualeguaychu, atencion al cliente, manejo de caja, soporte tecnico, venta directa y telefonica."
-          },
-          {
-            "id": 3,
-            "logoEmpresa": "../assets/img/LogoShell.png",
-            "url": "https://find.shell.com/ar/fuel/AR_10038541-santa-rosa-combustibles-srl",
-            "puesto": "Vendedor de playa",
-            "inicio": "01-03-2010",
-            "fin": "20-10-2011",
-            "descripcion": "Vendedor de playa en estación de servicio Shell Río Primero, con experiencia en manejo de dinero, rendición de caja, manejo de PC, atención a clientes."
           }
       ],
 
@@ -100,17 +81,10 @@
             "inicio": "10-06-2008",
             "fin": "15-09-2008",
             "descripcion": "Operador Informático de Aplicaciones Office Word Excel Powerpoint n° Orden 11058"
-          },
-        {
-            "id": 5,
-            "logoEstudio": "../assets/img/LogoGinastera.png",
-            "urlEstudio": "https://www.facebook.com/pages/category/Local-business/Conservatorio-Alberto-Ginastera-445100282536202/",
-            "estudio": "Ciclo Artístico Vocacional en Guitarra",
-            "inicio": "01-04-2017",
-            "fin": "30-11-2017",
-            "descripcion": "1er año de Ciclo Artístico Vocacional en Guitarra en Conservatorio “Alberto E. Ginastera”"
           }
     ],
+
+
     "habilidades": [
         {
           "id": 1,
@@ -136,45 +110,20 @@
             "id": 5,
             "nombre": "Bootstrap",
             "porcentaje": "90"
-          },
-          {
-            "id": 6,
-            "nombre": "Adaptabilidad",
-            "porcentaje": "80"
-          },
-          {
-              "id": 7,
-              "nombre": "Trabajo en Equipo",
-              "porcentaje": "90"
-            },
-            {
-              "id": 8,
-              "nombre": "Aprendizaje Rápido",
-              "porcentaje": "80"
-            },
-            {
-              "id": 9,
-              "nombre": "Resolución de Problemas",
-              "porcentaje": "85"
-            },
-            {
-              "id": 10,
-              "nombre": "Manejo del tiempo",
-              "porcentaje": "95"
-            }
+          }
       ],
       "redes": [
         
           {
             "id": 1,
             "nombre": "LinkedIn",
-            "url": "https://www.linkedin.com/in/heber-caleb-cuevas-1508bb224/",
+            "url": "https://www.linkedin.com/",
           "icoFont": "fa-brands fa-linkedin fa-xl"
           },
           {
             "id": 2,
             "nombre": "Github",
-            "url": "https://github.com/BelacdowN",
+            "url": "https://github.com/",
           "icoFont": "fa-brands fa-github fa-xl"
           }
       ],
@@ -182,29 +131,11 @@
         {
             "id": 1,
             "logoProyecto": "../assets/img/LogoArgPro.jpg",
-            "urlProyecto": "https://github.com/BelacdowN/PorfolioAngular_HCC",
-            "tituloProyecto": "Porfolio Argentina Programa",
-            "inicio": "28-06-2022",
-            "fin": "13-01-2023",
-            "descripcion": "Armado de Proyecto integrador de porfolio web, utilizando tecnologias Angular, Apache Netbeans, MySQL Workbench, Boopstrap. Lenguajes HTML, CSS, TypeScript, Java."
-        },
-        {
-          "id": 2,
-          "logoProyecto": "../assets/img/LogoArgPro.jpg",
-          "urlProyecto": "https://github.com/BelacdowN/ListaTareas",
-          "tituloProyecto": "Task List",
-          "inicio": "10-09-2022",
-          "fin": "20-09-2022",
-          "descripcion": "Armado de lista de tareas como actividad de práctica de Angular utilizando base de datos local JSON"
-        },
-        {
-          "id": 3,
-          "logoProyecto": "../assets/img/profile.jpg",
-          "urlProyecto": "https://github.com/BelacdowN/proyecto-de-ejemplo-chicas",
-          "tituloProyecto": "Capacitación FrontEnd",
-          "inicio": "03-10-2022",
-          "fin": "20-11-2022",
-          "descripcion": "Capacitación dada a estudiantes, viendo lenguajes HTML y CSS,usando Bootstrap, Fontawesome  para su maquetado y pasado a Angular por componentes, vista de Directivas, Data Binding, Formularios Reactivos."
-         }
+            "urlProyecto": "fsddsfsdf",
+            "tituloProyecto": "dsfsa",
+            "inicio": "28-06-2021",
+            "fin": "13-01-2022",
+            "descripcion": "grtrtrtre."
+        }
       ]
   }
