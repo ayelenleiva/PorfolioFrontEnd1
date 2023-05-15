@@ -10,8 +10,9 @@
             <input type="hidden" formControlName="id"  [ngModel]="experiencia.id">
               <div class="mb-3">
                 <label for="imagen" class="form-label">Editar Logo de Empresa</label>
-                <input class="form-control" type="url" formControlName="imagen" [ngModel]="experiencia.imagen" >
-              </div>
+                <input class="form-control" type="file" id="imagen" name="imagen" formControlName="imagen" [ngModel]="experiencia.imagen"  (change)="uploadImage($event)"
+                accept=".jpg, .jpeg, .png">
+                </div>
               <div class="mb-3">
                 <label for="url" class="form-label">Editar URL de Empresa</label>
                 <input type="url" class="form-control" formControlName="url" [ngModel]="experiencia.url" >

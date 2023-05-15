@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
+import { ImageService } from 'src/app/services/image.service';
 
 @Component({
   selector: 'app-modal-experiencia',
@@ -15,7 +16,8 @@ export class ModalExperienciaComponent implements OnInit{
   constructor(private formBuilder: FormBuilder,
               private sExperiencia: ExperienciaService,
               private activatedRoute:ActivatedRoute,
-              private router:Router
+              private router:Router,
+              public imageService: ImageService
     ) { 
       //Creamos el grupo de controles para el formulario 
     this.form= this.formBuilder.group({
@@ -57,6 +59,7 @@ export class ModalExperienciaComponent implements OnInit{
 
   onUpdate():void{
     this.sExperiencia.edit(this.form.value).subscribe(data => {
+      this.experiencia.imagen = this.imageService.url
       alert("Experiencia modificada.");
       this.router.navigate(['']);
     }
@@ -71,6 +74,11 @@ export class ModalExperienciaComponent implements OnInit{
       alert("falló en la carga, intente nuevamente");
       this.form.markAllAsTouched();
     }
+  }
+  uploadImage($event:any){
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "experiencia_" + id;
+    this.imageService.uploadImage($event, name)
   }
   
 

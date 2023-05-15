@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "porfolio-hcc"
-  }
+    "default": "portfoliofrontend1",
+    "porfoliofrontend1": "portfoliofrontend1"
+  },
+  "targets": {},
+  "etags": {}
 }

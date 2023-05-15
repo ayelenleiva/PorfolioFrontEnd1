@@ -32,12 +32,13 @@
                
 
                   <div class="mb-3">
-                    <label for="RedIcono" class="form-label">Agregar Url</label>
-                    <input type="text" class="form-control" placeholder="Ej: fa-regular fa-hat-santa" formControlName="icono" [ngClass]="{'is-invalid': Icono.errors && Icono.touched, 'is-valid': !Icono.errors && Icono.touched}">
+                    <label for="RedIcono" class="form-label">Agregar Imagen</label>
+                    <input type="file" class="form-control" placeholder="Ej: fa-regular fa-hat-santa" formControlName="icono" [ngClass]="{'is-invalid': Icono.errors && Icono.touched, 'is-valid': !Icono.errors && Icono.touched}">
                     <div *ngIf="Icono.errors && Icono.touched">    
                       <p *ngIf="Icono.hasError('required')" class="text-danger">
                         El icono es requerido.
                       </p>
+                     
                     </div>
                   </div>
 

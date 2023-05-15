@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { EducacionComponent } from 'src/app/components/educacion/educacion.component';
 import { Estudio } from 'src/app/model/estudio';
 import { EstudioService } from 'src/app/services/estudio.service';
+import { ImageService } from 'src/app/services/image.service';
 
 @Component({
   selector: 'app-modal-educacion',
@@ -16,7 +17,8 @@ export class ModalEducacionComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, 
               private sEstudio:EstudioService, 
               private activatedRoute:ActivatedRoute,
-              private router:Router
+              private router:Router,
+              public imageService : ImageService
               ) { 
     //Creamos el grupo de controles para el formulario 
     this.form= this.formBuilder.group({
@@ -53,6 +55,7 @@ export class ModalEducacionComponent implements OnInit {
  
  
   onUpdate():void{
+    this.estu.imagen = this.imageService.url
     this.sEstudio.edit(this.form.value).subscribe(data => {
       alert("Estudio modificado.");
       this.router.navigate(['']);
@@ -68,5 +71,11 @@ export class ModalEducacionComponent implements OnInit {
       alert("falló en la carga, intente nuevamente");
       this.form.markAllAsTouched();
     }
+  }
+
+  uploadImage($event:any){
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "estudio_" + id;
+    this.imageService.uploadImage($event, name)
   }
 }

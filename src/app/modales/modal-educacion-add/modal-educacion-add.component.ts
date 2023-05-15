@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Estudio } from 'src/app/model/estudio';
 import { EstudioService } from 'src/app/services/estudio.service';
+import { ImageService } from 'src/app/services/image.service';
 
 @Component({
   selector: 'app-modal-educacion-add',
@@ -10,7 +12,10 @@ import { EstudioService } from 'src/app/services/estudio.service';
 })
 export class ModalEducacionAddComponent implements OnInit {
   form:FormGroup;
-  constructor(private formBuilder: FormBuilder, private sEstudio: EstudioService) { 
+
+  constructor(private formBuilder: FormBuilder, 
+              private sEstudio: EstudioService,
+              ) { 
     //Creamos el grupo de controles para el formulario 
     this.form=this.formBuilder.group({
       estudio:['',[Validators.required]],

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProyectosComponent } from 'src/app/components/proyectos/proyectos.component';
 import { Proyecto } from 'src/app/model/proyecto';
+import { ImageService } from 'src/app/services/image.service';
 import { ProyectoService } from 'src/app/services/proyecto.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class ModalProyectosComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, 
               private sProye:ProyectoService,
               private activatedRoute:ActivatedRoute,
-              private router:Router
+              private router:Router,
+              public imageService: ImageService
   ) { 
     //Creamos el grupo de controles para el formulario 
     this.form= this.formBuilder.group({
@@ -59,6 +61,7 @@ export class ModalProyectosComponent implements OnInit {
 
   onUpdate():void{
     this.sProye.edit(this.form.value).subscribe(data => {
+      this.proye.imagen = this.imageService.url
       alert("Proyecto modificado.");
       this.router.navigate(['']);
     }
@@ -74,7 +77,11 @@ export class ModalProyectosComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-  
+  uploadImage($event:any){
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "proyecto_" + id;
+    this.imageService.uploadImage($event, name)
+  }
 
   
 }

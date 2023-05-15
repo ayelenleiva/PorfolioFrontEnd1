@@ -3,7 +3,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header seccion rounded">
-                  <h5 class="modal-title text-white" id="exampleModalLabel">Login</h5>
+                  <h5 class="modal-title text-white" id="exampleModalLabel">Ingresar</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form [formGroup]="form" (ngSubmit)="onLogin()" novalidate name="loginForm"> 
@@ -30,9 +30,15 @@
                         </div>
                       </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-ligth" (click)="borrar()">Cancelar</button>
+                          <button type="button" class="btn btn-ligth" (click)="borrar()">Borrar</button>
                           <button type="submit" class="btn btnLogin text-white" data-bs-dismiss="modal">Iniciar Sesión</button>
-                        </div>                     
+                          
+                        </div>    
+                        <div>
+                          <p class="mb-0">¿No tienes una cuenta? <button type="submit" class="btn btnLogin text-white" routerLink="">Registrarse</button>
+
+                          </p>
+                        </div>                 
 
                       </form>
               </div>

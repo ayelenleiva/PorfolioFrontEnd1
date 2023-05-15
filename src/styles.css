@@ -25,12 +25,12 @@ body{
 
 /* estilo de secciones */
 .seccion{
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(14, 1, 26, 0.76);
    
     position: relative;
    }
 /* estilo de secciones para directivas*/
 .fondouser{
-  background-color: #0a0113d2;
+  background-color: #7f00fdd2;
 }   
 

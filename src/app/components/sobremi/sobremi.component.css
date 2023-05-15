@@ -9,6 +9,13 @@
 .position-absolute{
     opacity: 0.6;
 }
+
+.carousel slide{
+    width: 100%;
+    min-height: 10em;
+    max-height: 20em;
+}
+
 /*tamaño banner*/
 .banner{
     width: 100%;
@@ -18,7 +25,43 @@
 /*imagen de perfil */
 .profileImage{
     box-shadow: 6px 6px 5px 2px rgba(24, 21, 21, 0.945);
-    margin-top: -8em;
+    margin-top: -1em;
     margin-left: 1em;
     min-width: 5em;
 }
+
+/* configuración del body*/
+body{    
+    background-color: rgb(89, 3, 248);
+      background-image: url(src\assets\img\fondo.jpg);
+      background-size:cover;
+      background-repeat: no-repeat;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      margin: 1rem;
+  }
+  
+  /* boton login modal */
+  .btn.btnLogin{
+      background-color: rgba(149, 11, 241, 0.795);
+  }
+  
+  /* colores de bonotes de edición */
+  .btn.btn-close-white:hover,
+  .btn.btn-close-white{
+      color: rgb(110, 8, 243);
+  }
+  /* tamaño minimo de imágenes de datos */
+  .w-25{
+    min-width: 3em;
+  }
+  
+  /* estilo de secciones */
+  .seccion{
+    background-color: rgba(14, 1, 26, 0.76);
+     
+      position: relative;
+     }
+  /* estilo de secciones para directivas*/
+  .fondouser{
+    background-color: #7f00fdd2;
+  }   

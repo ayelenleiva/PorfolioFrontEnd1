@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { persona } from '../model/persona.model';
+import { PersonaService } from '../services/persona.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { persona } from 'src/app/model/persona.model';
-import { ImageService } from 'src/app/services/image.service';
-import { PersonaService } from 'src/app/services/persona.service';
+
 
 @Component({
-  selector: 'app-modal-perfil',
-  templateUrl: './modal-perfil.component.html',
-  styleUrls: ['./modal-perfil.component.css']
+  selector: 'app-modal-registro',
+  templateUrl: './modal-registro.component.html',
+  styleUrls: ['./modal-registro.component.css']
 })
-export class ModalPerfilComponent implements OnInit {
+export class ModalRegistroComponent implements OnInit {
   form:FormGroup;
   perso:persona;
   constructor(private formBuilder: FormBuilder,
               private sPersona:PersonaService,
               private activatedRoute:ActivatedRoute,
-              private router:Router,
-              public imageService: ImageService
+              private router:Router
     ) {
     //Creamos el grupo de controles para el formulario 
     this.form=this.formBuilder.group({
@@ -66,7 +65,6 @@ export class ModalPerfilComponent implements OnInit {
   }
 
   onUpdate():void{
-    this.perso.img = this.imageService.url
     this.sPersona.edit(this.form.value).subscribe(data => {
       alert("Persona modificada.");
       this.router.navigate(['']);
@@ -82,12 +80,6 @@ export class ModalPerfilComponent implements OnInit {
       alert("falló en la carga, intente nuevamente");
       this.form.markAllAsTouched();
     }
-  }
-  uploadImage($event:any){
-    const id = this.activatedRoute.snapshot.params['id'];
-    const name = "perfil_" + id;
-    this.imageService.uploadImage($event, name)
-
   }
 
 }

@@ -8,9 +8,11 @@ import { ModalHabilidadesComponent } from './modales/modal-habilidades/modal-hab
 import { ModalPerfilComponent } from './modales/modal-perfil/modal-perfil.component';
 import { ModalProyectosComponent } from './modales/modal-proyectos/modal-proyectos.component';
 import { GuardGuard } from './services/guard.guard';
+import { ModalRegistroComponent } from './modales/modal-registro.component';
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
+  {path:'registrarse',canActivate: [GuardGuard], component: ModalRegistroComponent },
   {path: 'editPerfil/:id', canActivate:[GuardGuard], component: ModalPerfilComponent},
   {path: 'editExperiencia/:id', canActivate: [GuardGuard],  component: ModalExperienciaComponent},
   {path: 'editEducacion/:id', canActivate: [GuardGuard], component: ModalEducacionComponent},

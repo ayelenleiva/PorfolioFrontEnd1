@@ -10,14 +10,19 @@
                 <input type="hidden" formControlName="id" [ngModel]="perso.id">
                 <div class="mb-3">
                   <label for="perfilImg" class="form-label">Modificar imagen de perfil<span class="text-danger">*</span></label>
-                  <input class="form-control" type="url" formControlName="img"  [ngModel]="perso.img" [ngClass]="{'is-invalid': Img.errors && Img.touched, 'is-valid': !Img.errors && Img.touched}">
+                  
+                  <input class="form-control" type="file"  id="img" name="img" formControlName="img"  [ngModel]="perso.img" [ngClass]="{'is-invalid': Img.errors && Img.touched, 'is-valid': !Img.errors && Img.touched}" (change)="uploadImage($event)"
+                  accept=".jpg, .jpeg, .png">
                   <div *ngIf="Img.errors && Img.touched" class="invalid-feedback">
                     <div *ngIf="Img.errors['required']">La imagen de perfil es requerido</div>
                   </div>
-                </div>
+                  </div>
+                  <div class="img">
+                    <img [src]= "imageService.url" width="200px">
+                    </div>
                 <div class="mb-3">
                   <label for="perfilBanner" class="form-label">Modificar imagen de banner<span class="text-danger">*</span></label>
-                  <input class="form-control" type="url" formControlName="banner"  [ngModel]="perso.banner" [ngClass]="{'is-invalid': Banner.errors && Banner.touched, 'is-valid': !Banner.errors && Banner.touched}">
+                  <input class="form-control" type="file" formControlName="banner"  [ngModel]="perso.banner" [ngClass]="{'is-invalid': Banner.errors && Banner.touched, 'is-valid': !Banner.errors && Banner.touched}">
                   <div *ngIf="Banner.errors && Banner.touched" class="invalid-feedback">
                     <div *ngIf="Banner.errors['required']">El banner es requerido</div>
                   </div>

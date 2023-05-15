@@ -29,6 +29,10 @@ import { ModalHabilidadesAddComponent } from './modales/modal-habilidades-add/mo
 import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-proyectos-add.component';
 import { ModalRedAddComponent } from './modales/modal-red-add/modal-red-add.component';
 import { CarrucelComponent } from './components/carrucel/carrucel/carrucel.component';
+import { ModalRegistroComponent } from './modales/modal-registro.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -55,14 +59,18 @@ import { CarrucelComponent } from './components/carrucel/carrucel/carrucel.compo
     ModalHabilidadesAddComponent,
     ModalProyectosAddComponent,
     ModalRedAddComponent,
-    CarrucelComponent
+    CarrucelComponent,
+  
+    ModalRegistroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider

@@ -2,12 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Red } from '../model/red';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RedService {
-  url:string= 'http://localhost:8080/red/';
+  url:string= environment.URL+"/red/";
+  
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Red[]>{

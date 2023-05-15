@@ -9,7 +9,8 @@
             <input type="hidden" formControlName="id" [ngModel]="estu.id">
                   <div class="mb-3">
                   <label for="educacionImg" class="form-label">Modificar Logo de Instituto</label>
-                  <input class="form-control" type="url"  formControlName="imagen" [ngModel]="estu.imagen">
+                  <input class="form-control" type="file"   id="imagen" name="imagen" formControlName="imagen" [ngModel]="estu.imagen"  (change)="uploadImage($event)"
+                  accept=".jpg, .jpeg, .png">
                 </div>
                 <div class="mb-3">
                   <label for="educacionEstudio" class="form-label">Agregar Instituto</label>

@@ -11,7 +11,8 @@
                 </div>
                 <div class="mb-3">
                   <label for="proyectoImg" class="form-label">Modificar Imagen de Proyecto</label>
-                  <input class="form-control" type="url"  placeholder="URL de imagen" formControlName="imagen" [ngModel]="proye.imagen">
+                  <input class="form-control" type="file" id="imagen" name="imagen"  placeholder="URL de imagen" formControlName="imagen" [ngModel]="proye.imagen" (change)="uploadImage($event)"
+                  accept=".jpg, .jpeg, .png">
                 </div>
                 <div class="mb-3">
                   <label for="educacionEstudio" class="form-label">Modificar Url</label>

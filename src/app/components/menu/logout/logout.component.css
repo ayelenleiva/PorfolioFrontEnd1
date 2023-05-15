@@ -5,3 +5,38 @@
     -webkit-transform: rotate(50deg);
             transform: rotate(50deg); */
 }
+/* configuración del body*/
+body{    
+    background-color: rgb(89, 3, 248);
+      background-image: url(src\assets\img\fondo.jpg);
+      background-size:cover;
+      background-repeat: no-repeat;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      margin: 1rem;
+  }
+  
+  /* boton login modal */
+  .btn.btnLogin{
+      background-color: rgba(149, 11, 241, 0.795);
+  }
+  
+  /* colores de bonotes de edición */
+  .btn.btn-close-white:hover,
+  .btn.btn-close-white{
+      color: rgb(110, 8, 243);
+  }
+  /* tamaño minimo de imágenes de datos */
+  .w-25{
+    min-width: 3em;
+  }
+  
+  /* estilo de secciones */
+  .seccion{
+    background-color: rgba(14, 1, 26, 0.76);
+     
+      position: relative;
+     }
+  /* estilo de secciones para directivas*/
+  .fondouser{
+    background-color: #7f00fdd2;
+  }   
