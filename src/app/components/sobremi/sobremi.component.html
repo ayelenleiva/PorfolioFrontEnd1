@@ -22,21 +22,22 @@
 
 
 
-      <img [src]="persona?.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
+      <img src="assets/img/banner4.png" alt="banner" width="100%" height="auto" class="rounded-top banner">
       <div class="carousel-caption d-none d-md-block">
         <h1>¡ Bienvenidos !</h1>
         <p>“La educación es el arma más poderosa que puedes usar para cambiar el mundo” </p>
       </div>
     </div>
     <div class="carousel-item">
-      <img [src]="persona?.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
+      <!--Le saco los corchetes para poner la imgagen para mostrar de ejemplo despues se reempleza por persona?.banner-->
+      <img src="assets/img/banner4.png" alt="banner" width="100%" height="auto" class="rounded-top banner">
       <div class="carousel-caption d-none d-md-block">
         <h1>¡ Bienvenidos !</h1>
         <p>"Los sueños sin metas, son sólo sueños; y te llevarán a desilusiones. Las metas, son el camino hacia tus sueños; pero no se pueden lograr sin disciplina y consistencia"</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img [src]="persona?.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
+      <img src="assets/img/banner4.png" alt="banner" width="100%" height="auto" class="rounded-top banner">
       <div class="carousel-caption d-none d-md-block">
         <h1>¡ Bienvenidos !</h1>
         <p> “El verdadero peligro no es que las computadoras comenzaran a pensar como los hombres, sino que los hombres comenzaran a pensar como las computadoras”</p>
@@ -55,7 +56,7 @@
      
       <div class="row p-3">
       <div class="col-3">
-        <img [src]="persona?.img" class="rounded-circle profileImage w-50" alt="profileImage"> 
+        <img src="assets/img/profile.jpeg" class="rounded-circle profileImage w-50" alt="profileImage"> 
        <!-- Button trigger modal -->  
         <button type="button" *ngIf="isLogged" routerLink="editPerfil/{{persona?.id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>
         <br>
